@@ -1,7 +1,13 @@
 // Require Dependencies
 const $ = require('jquery');
 const powershell = require('node-powershell');
-const dt = require('datatables.net')();
+
+// Make jQuery available globally - CRITICAL for DataTables
+window.$ = $;
+window.jQuery = $;
+
+// Initialize DataTables after jQuery is globally available
+const dt = require('datatables.net')(window, $);
 const dtbs = require('datatables.net-bs4')(window, $);
 
 // Get Global Variables
