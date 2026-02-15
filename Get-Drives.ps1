@@ -6,7 +6,6 @@ param (
 )
 
 $parms = @{
-    ComputerName = $ComputerName
     ErrorAction = "Stop"
 }
 
